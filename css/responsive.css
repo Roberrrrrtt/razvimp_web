@@ -616,7 +616,7 @@
   }
 
   .before-after__after-layer img {
-    min-width: 100vw;
+    min-width: 0;
   }
 
   /* FORMULARIO Y CONTACTO EN MÓVIL (Perfectamente encuadrado al 100%) */

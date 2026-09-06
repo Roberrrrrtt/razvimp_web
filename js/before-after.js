@@ -69,10 +69,12 @@ document.addEventListener('DOMContentLoaded', () => {
 
   // Ajustar tamaño de imagen interna al cambiar el ancho de pantalla
   const syncInnerImageWidth = () => {
-    const innerImg = afterLayer.querySelector('img');
-    if (innerImg) {
-      innerImg.style.width = `${container.offsetWidth}px`;
-      innerImg.style.minWidth = `${container.offsetWidth}px`;
+    const innerImg = afterLayer?.querySelector('img');
+    if (innerImg && container) {
+      const boxWidth = Math.round(container.getBoundingClientRect().width || container.offsetWidth);
+      innerImg.style.width = `${boxWidth}px`;
+      innerImg.style.minWidth = '0px';
+      innerImg.style.maxWidth = 'none';
     }
   };
 

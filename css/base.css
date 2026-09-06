@@ -16,6 +16,9 @@ html {
   -moz-osx-font-smoothing: grayscale;
   background-color: var(--bg-page);
   color-scheme: dark;
+  overflow-x: hidden;
+  max-width: 100%;
+  width: 100%;
 }
 
 body {
@@ -24,9 +27,18 @@ body {
   color: var(--text-secondary);
   line-height: 1.6;
   overflow-x: hidden;
+  max-width: 100%;
+  width: 100%;
+  position: relative;
   display: flex;
   flex-direction: column;
   min-height: 100vh;
+}
+
+main {
+  width: 100%;
+  max-width: 100%;
+  overflow-x: hidden;
 }
 
 /* Selección de texto */
