@@ -899,6 +899,7 @@
   user-select: none;
   cursor: ew-resize;
   background-color: var(--bg-card);
+  touch-action: none;
 }
 
 .before-after-box img {
