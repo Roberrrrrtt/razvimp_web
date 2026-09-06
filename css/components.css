@@ -240,7 +240,8 @@
 }
 
 .site-nav__header {
-  display: none; /* Oculto en PC, mostrado en móvil */
+  display: none;
+  /* Oculto en PC, mostrado en móvil */
 }
 
 .site-nav__list {
@@ -296,7 +297,7 @@
   padding-top: var(--space-12);
   padding-bottom: var(--space-16);
   background: radial-gradient(circle at 85% 20%, rgba(2, 132, 199, 0.18) 0%, transparent 55%),
-              linear-gradient(180deg, #0b0f19 0%, #111827 100%);
+    linear-gradient(180deg, #0b0f19 0%, #111827 100%);
   overflow: hidden;
   border-bottom: 1px solid var(--border-subtle);
 }
@@ -678,21 +679,6 @@
 
 .target-card:hover .target-card__image img {
   transform: scale(1.06);
-}
-
-.target-card__badge {
-  position: absolute;
-  bottom: var(--space-3);
-  left: var(--space-3);
-  background-color: rgba(11, 15, 25, 0.92);
-  color: var(--color-primary-light);
-  border: 1px solid rgba(56, 189, 248, 0.3);
-  font-size: var(--font-size-xs);
-  font-weight: 700;
-  padding: 0.25rem 0.65rem;
-  border-radius: var(--radius-sm);
-  text-transform: uppercase;
-  letter-spacing: 0.05em;
 }
 
 .target-card__body {
@@ -1323,6 +1309,8 @@
 .contact-direct-icon {
   width: 44px;
   height: 44px;
+  min-width: 44px;
+  min-height: 44px;
   background-color: rgba(56, 189, 248, 0.15);
   border-radius: var(--radius-md);
   display: flex;
@@ -1330,6 +1318,13 @@
   justify-content: center;
   flex-shrink: 0;
   color: var(--color-primary-light);
+}
+
+.contact-direct-icon svg {
+  width: 22px;
+  height: 22px;
+  display: block;
+  flex-shrink: 0;
 }
 
 .contact-direct-label {
@@ -1391,7 +1386,8 @@
   border: 1.5px solid var(--border-light);
   border-radius: var(--radius-md);
   color: #ffffff;
-  font-size: 16px; /* Evita zoom automático en iPhone Safari */
+  font-size: 16px;
+  /* Evita zoom automático en iPhone Safari */
   transition: border-color var(--transition-fast), box-shadow var(--transition-fast);
 }
 
@@ -1543,9 +1539,20 @@
 }
 
 @keyframes pulse-ring {
-  0% { transform: scale(0.95); opacity: 0.6; }
-  50% { transform: scale(1.25); opacity: 0; }
-  100% { transform: scale(0.95); opacity: 0.6; }
+  0% {
+    transform: scale(0.95);
+    opacity: 0.6;
+  }
+
+  50% {
+    transform: scale(1.25);
+    opacity: 0;
+  }
+
+  100% {
+    transform: scale(0.95);
+    opacity: 0.6;
+  }
 }
 
 /* --------------------------------------------------------------------------
